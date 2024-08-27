@@ -1,0 +1,205 @@
+
+
+.background-wrapper {
+  background: linear-gradient(90deg, #ffffff,#fbfbfb, #0069d9);
+  background-size: 300%;
+  transition: background-position 0.5s ease;
+  padding: 20px; /* Adjust as needed */
+   
+}
+
+.background-wrapper:hover {
+  background-position: 100%;
+}
+
+.about-us-container {
+  padding: 70px 0;
+  margin: 50px;
+  display: flex;
+  height: 70vh;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff; /* Background color of the container */
+  border-radius: 20px; 
+}
+.image-container {
+  flex: 1;
+  transition: transform 0.5s ease;
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 5px;
+  border: 0;
+  transition: transform 0.5s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.1);
+}
+
+.text-container {
+  flex: 1;
+  margin-right: 50px;
+  padding-top: 35px;
+}
+
+.text-container h2 {
+  position: relative;
+  margin: 0 0 20px;
+  padding-bottom: 15px;
+  font-size: 30px;
+  text-align: left;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.text-container h2:hover {
+  color: #349FD9;
+}
+
+.text-container h2::after {
+  position: absolute;
+  content: "";
+  background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+  height: 4px;
+  width: 60px;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.text-container h2:hover::after {
+  width: 100%;
+}
+
+.text-container p {
+  line-height: 24px;
+  margin: 30px 0;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: justify;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.know-more-button {
+  display: inline-block;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #349FD9, #FFFFFF, #0069d9);
+  color: #1e1e1e; /* Start with dark text color */
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-size: 300%;
+  transition: background-position 0.5s ease, color 0.5s ease, box-shadow 0.3s ease;
+  text-align: center;
+  margin-top: 20px; /* Space between text and button */
+}
+
+.know-more-button:hover {
+  background-position: 100%;
+  color: #fff; /* Change to white color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.know-more-button:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 1024px) {
+  .know-more-button {
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .know-more-button {
+    padding: 8px 15px; /* Adjust padding for smaller screens */
+    font-size: 13px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .know-more-button {
+    padding: 6px 10px; /* Adjust padding for smaller screens */
+    font-size: 12px; /* Adjust font size for smaller screens */
+  }
+}
+
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 1024px) {
+  .background-wrapper {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .about-us-container {
+    padding: 50px 20px; /* Adjusted padding for smaller screens */
+    margin: 20px; /* Adjusted margin for smaller screens */
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    height: auto; /* Allow height to adjust based on content */
+  }
+
+  .text-container h2 {
+    font-size: 28px; /* Adjusted font size for smaller screens */
+  }
+
+  .text-container p {
+    font-size: 18px; /* Adjusted font size for smaller screens */
+  }
+
+  .image-container img {
+    max-width: 400px; /* Ensure image scales with container */
+  }
+}
+
+@media (max-width: 768px) {
+  .background-wrapper {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .about-us-container {
+    padding: 30px 10px; /* Adjusted padding for smaller screens */
+  }
+
+  .text-container h2 {
+    font-size: 24px; /* Adjusted font size for smaller screens */
+  }
+
+  .text-container p {
+    font-size: 16px; /* Adjusted font size for smaller screens */
+  }
+
+  .image-container img {
+    max-width: 300px; /* Ensure image scales with container */
+  }
+}
+
+@media (max-width: 480px) {
+  .background-wrapper {
+    padding: 5px; /* Adjust padding for smaller screens */
+  }
+
+  .about-us-container {
+    padding: 20px 5px; /* Adjusted padding for smaller screens */
+  }
+
+  .text-container h2 {
+    font-size: 20px; /* Adjusted font size for smaller screens */
+  }
+
+  .text-container p {
+    font-size: 14px; /* Adjusted font size for smaller screens */
+  }
+
+  .image-container img {
+    max-width: 100%; /* Ensure image scales with container */
+  }
+}

@@ -1,0 +1,110 @@
+/* Partnership Banner Styles */
+.partnership-banner {
+  background: linear-gradient(90deg, #ffffff, #fbfbfb, #0069d9);
+  background-size: 300%;
+  transition: background-position 0.5s ease;
+  padding: 10px 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  position: relative;
+}
+
+.partnership-banner:hover {
+  background-position: 100%;
+}
+
+.partners-text {
+  font-size: 1rem;
+  margin-right: 15px;
+  font-weight: bold;
+  color: #333; /* Ensure it matches text color in other sections */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.partners-text:hover {
+  color: #ffffff; /* Change text color on hover */
+}
+
+.partners-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center logos horizontally */
+  flex-wrap: wrap; /* Wrap logos if they overflow */
+}
+
+.partner {
+  display: flex;
+  align-items: center;
+  margin: 0 15px; /* Increased spacing for better separation */
+  transition: transform 0.3s ease; /* Smooth scale transition */
+}
+
+.partner:hover {
+  transform: scale(1.1); /* Slightly enlarge logos on hover */
+}
+
+.partner img {
+  max-height: 40px; /* Increase max-height for better visibility */
+  margin-right: 10px; /* Increase spacing between logo and text */
+}
+
+.partner span {
+  font-size: 1rem; /* Slightly larger font size for better readability */
+  color: #333; /* Consistent text color */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.partner:hover span {
+  color: #ffffff; /* Change text color on hover */
+}
+
+/* Ensure responsiveness for partnership banner */
+@media (max-width: 1024px) {
+  .partnership-banner {
+    padding: 10px 15px;
+  }
+
+  .partners-text {
+    font-size: 0.9rem;
+    margin-right: 10px;
+  }
+
+  .partner img {
+    max-height: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .partnership-banner {
+    padding: 10px 10px;
+  }
+
+  .partners-text {
+    font-size: 0.8rem;
+    margin-right: 0;
+  }
+
+  .partner img {
+    max-height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .partnership-banner {
+    padding: 5px 5px;
+    flex-direction: column;
+  }
+
+  .partners-text {
+    font-size: 0.7rem;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .partner img {
+    max-height: 25px;
+  }
+}

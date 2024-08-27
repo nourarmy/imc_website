@@ -1,0 +1,135 @@
+/* services.css */
+.services-slider-container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, #349FD9, #FFFFFF, #0069d9);
+  background-size: 300%;
+  transition: background-position 0.5s ease;
+  padding: 20px;
+  
+}
+
+.services-slider-container:hover {
+  background-position: 100%;
+}
+
+.services-slider-title {
+  font-family: 'Azonix', sans-serif;
+  text-align: center;
+  color: white;
+  font-size: 42px;
+  margin: 20px 0;
+  font-weight: bold;
+}
+.services-slider-title:hover {
+  
+  transform: scale(1.05); /* Slightly scale up on hover */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add text shadow on hover */
+}
+
+
+.services-card {
+  background: rgb(255, 255, 255);
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  max-width: 800px;
+  height: auto;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.services-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.services-icon-container {
+  margin-bottom: 30px;
+}
+
+.services-icon-img {
+  width: 100px;
+  height: auto;
+  margin-top: 20px;
+}
+
+.services-title {
+  font-size: 35px;
+  margin: 20px 0;
+  color: #333;
+  transition: color 0.3s ease;
+  font-family: 'Azonix', sans-serif;
+}
+
+.services-description {
+  font-size: 25px;
+  color: #666;
+  font-family: 'Poppins', sans-serif; 
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .services-slider-title {
+    font-size: 36px;
+  }
+
+  .services-card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .services-title {
+    font-size: 30px;
+  }
+
+  .services-description {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-slider-title {
+    font-size: 30px;
+  }
+
+  .services-card {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .services-title {
+    font-size: 26px;
+  }
+
+  .services-description {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-slider-title {
+    font-size: 24px;
+  }
+
+  .services-card {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .services-title {
+    font-size: 22px;
+  }
+
+  .services-description {
+    font-size: 16px;
+  }
+}

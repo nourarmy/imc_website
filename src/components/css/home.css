@@ -7,15 +7,15 @@ body, html {
 
 .home-component {
   position: relative;
-  height: 100vh;
+  height: 85vh;
   background-color: rgba(0, 0, 0, 0.7);
   overflow: hidden;
   width: 100vw;
 }
+
 .navbar-toggle {
   display: none;
 }
-
 
 .background-image {
   position: absolute;
@@ -50,30 +50,91 @@ body, html {
   text-align: center;
   color: white;
 }
-
 .text-overlay h1 {
   font-size: 3rem;
-  font-family: "Raleway", sans-serif;
   margin-bottom: 20px;
   z-index: 3;
+  background: linear-gradient(90deg, #349FD9, #FFFFFF, #0069d9);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 300%;
+  animation: moveGradient 10s infinite linear; /* Slower, smoother animation */
+  transition: all 0.6s ease-in-out; /* Smooth transition for hover effect */
 }
 
-.search-bar {
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.text-overlay h1:hover {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Add text shadow on hover */
+  transform: scale(1.05); /* Slightly enlarge text on hover */
+  animation: moveGradientHover 5s infinite ease-in-out; /* Smooth reverse gradient on hover */
+}
+
+@keyframes moveGradientHover {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* IMC Title Styling */
+.imc-title-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-top: 50%;
-  z-index: 1000;
-  width: 40rem; /* Make the search bar take up full width */
+  margin-left: 10px;
+  position: relative;
+  
+  
 }
 
-.search-bar input {
-  padding: 20px;
-  border: none;
-  border-radius: 20px;
-  margin-right: 10px;
-  font-size: 24px;
-  flex: 1; 
+.imc-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.imc-title .imc-letter {
+  margin-right: 2px;
+}
+
+.imc-title .i {
+  color: #ef5225; /* Adjust the color to match the logo's color */
+}
+
+.imc-title .m {
+  color: #fcb712; /* Adjust the color to match the logo's color */
+}
+
+.imc-title .c {
+  color: #359fd9; /* Adjust the color to match the logo's color */
+}
+
+/* Green underline effect */
+.imc-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-image: linear-gradient(90deg, #7eb941, #0056b3);
+  transition: width 0.3s ease;
+}
+
+.imc-title-container:hover .imc-title::after {
+  width: 100%;
 }
 
 .search-bar button {
@@ -81,18 +142,18 @@ body, html {
   border: none;
   border-radius: 20px;
   background: linear-gradient(90deg, #349FD9, #FFFFFF, #0069d9);
-  color: #000; /* Start with black color */
+  color: #000;
   cursor: pointer;
   font-size: 20px;
   text-transform: uppercase;
   font-weight: 700;
   background-size: 300%;
-  transition: background-position 0.5s ease, color 0.5s ease; /* Transition for both background and color */
+  transition: background-position 0.5s ease, color 0.5s ease;
 }
 
 .search-bar button:hover {
   background-position: 100%;
-  color: #fff; /* Change to white color on hover */
+  color: #fff;
 }
 
 .arrows {
@@ -129,7 +190,7 @@ body, html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 7px 20px;
   transition: all 0.3s ease;
 }
 
@@ -195,7 +256,7 @@ body, html {
 .navbar-nav a:hover::after {
   opacity: 1;
   transform: scaleX(1);
-  background-image: linear-gradient(90deg, #349FD9,  #0056b3);
+  background-image: linear-gradient(90deg, #349FD9, #0056b3);
 }
 
 /* Join Button */
@@ -204,28 +265,40 @@ body, html {
   border: none;
   border-radius: 20px;
   background: linear-gradient(90deg, #349FD9, #FFFFFF, #0069d9);
-  color: #000; /* Start with black color */
+  color: #1e1e1e;
   cursor: pointer;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 700;
   background-size: 300%;
-  transition: background-position 0.5s ease, color 0.5s ease; /* Transition for both background and color */
+  transition: background-position 0.5s ease, color 0.5s ease;
 }
 
 .join-button:hover {
   background-position: 100%;
-  color: #fff; /* Change to white color on hover */
+  color: #fff;
 }
 
-/* Responsive Navbar Styles */
+/* Welcome Message Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
   .text-overlay h1 {
-    font-size: 2rem; /* Smaller font size for smaller screens */
+    font-size: 2rem;
   }
 
   .search-bar {
-    width: 90%; /* Full width with some padding on smaller screens */
+    width: 90%;
     margin-top: 40%;
   }
 
@@ -263,14 +336,14 @@ body, html {
   }
 
   .navbar-nav {
-    display: none; /* Hide links by default */
+    display: none;
     flex-direction: column;
     width: 100%;
     margin-top: 10px;
   }
 
   .navbar-nav.active {
-    display: flex; /* Show links when navbar is active */
+    display: flex;
   }
 
   .navbar-nav li {
@@ -322,6 +395,7 @@ body, html {
   .arrows button {
     font-size: 1.2rem;
   }
+
   .navbar {
     padding: 5px;
   }

@@ -1,0 +1,44 @@
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+    z-index: 2;
+  }
+  
+  .timeline h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .time-left {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 10px 0;
+  }
+  
+  @media (max-width: 768px) {
+    .timeline h2 {
+      font-size: 1.5rem;
+    }
+  
+    .time-left {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .timeline h2 {
+      font-size: 1.2rem;
+    }
+  
+    .time-left {
+      font-size: 1rem;
+    }
+  }
+  
