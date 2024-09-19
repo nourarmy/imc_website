@@ -1,112 +1,116 @@
 .countdown-container {
-    position: relative;
-    z-index: 1000; /* Ensure it's above the background but below the navbar */
-    margin-top: 35px; /* Adjust this value to be the height of your navbar */
-  }
+  position: relative;
+  z-index: 1000; /* Ensure it's above the background but below the navbar */
+  margin-top: 67px; /* Adjust this value to be the height of your navbar */
+}
+
+/* Countdown Bar */
+.countdown-bar {
+  width: 100%;
+  background: linear-gradient(90deg, #349FD9, #FFFFFF, #0069d9);
+  background-size: 300%;
+  transition: background-position 0.5s ease;
+  color: #262626;
+  display: flex;
+  justify-content: flex-start; /* Align to the left */
+  align-items: center;
+  padding: 15px 40px; /* Added padding to the left for alignment */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  font-weight: bold;
+}
+
+.countdown-bar:hover {
+  background-position: 100%;
+  color: white;
+}
+
+.countdown-bar .phrase {
+  font-size: 1.3rem; /* Moderate font size for the phrase */
+  margin-right: 90px;
   
-  /* Countdown Bar */
-  .countdown-bar {
-    width: 100%;
-    background: linear-gradient(90deg, #349FD9, #FFFFFF, #0069d9);
-    background-size: 300%;
-    transition: background-position 0.5s ease;
-    color: #262626;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    font-weight: bold;
-    
-  }
-  
-  .countdown-bar:hover {
-    background-position: 100%;
-    color: white;
-  }
-  
+}
+.line2{
+  word-spacing: 0.7em;
+}
+.event-highlight {
+  font-size: 1.5rem; /* Adjust size as needed */
+  font-weight: bold;
+   display: inline-block;
+ 
+}
+
+
+
+.countdown {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  max-width: 800px;
+  flex-wrap: nowrap; /* Ensure it stays horizontal */
+}
+
+.time-unit {
+  text-align: center;
+  margin: 0 20px; /* Slightly increased margin for better spacing */
+}
+
+.time-unit .time-value {
+  font-size: 1.7rem; /* Moderate font size for the time values */
+  font-weight: bold;
+  display: block;
+}
+
+.time-unit p {
+  margin: 0;
+  font-size: 1rem; /* Slightly smaller font for the unit labels */
+}
+
+/* Make adjustments for smaller screens */
+@media (max-width: 768px) {
   .countdown-bar .phrase {
-    margin-top: 25px;
+    font-size: 1rem; /* Moderate font size for smaller screens */
     margin-right: 20px;
-    font-size: 1.5rem;
-    
   }
-  
+
   .countdown {
-    display: flex;
-    justify-content: space-around;
-    width: 50%;
-    max-width: 800px;
-    flex-wrap: nowrap; /* Ensure it stays horizontal */
+    width: 80%;
+    max-width: 100%;
+    justify-content: space-between;
   }
-  
+
   .time-unit {
-    text-align: center;
-    margin: 0 15px;
-    padding-top: 16px;
-    
-  
+    margin: 0 9px;
   }
-  
+
   .time-unit .time-value {
-    font-size: 2rem;
-    font-weight: bold;
-    display: block;
-    
+    font-size: 1.3rem; /* Moderate size for smaller screens */
   }
-  
+
   .time-unit p {
-    margin: 0;
-    font-size: 1rem;
+    font-size: 0.9rem; /* Adjusted for smaller screens */
   }
-  
-  /* Make adjustments for smaller screens */
-  @media (max-width: 768px) {
-    .countdown-bar .phrase {
-      font-size: 1.2rem;
-      margin-right: 10px;
-    }
-  
-    .countdown {
-      width: 80%;
-      max-width: 100%;
-      justify-content: space-between;
-    }
-  
-    .time-unit {
-      margin: 0 5px;
-    }
-  
-    .time-unit .time-value {
-      font-size: 1.5rem;
-    }
-  
-    .time-unit p {
-      font-size: 0.8rem;
-    }
+}
+
+@media (max-width: 480px) {
+  .countdown-bar .phrase {
+    font-size: 0.7rem; /* Slightly smaller for very small screens */
   }
-  
-  @media (max-width: 480px) {
-    .countdown-bar .phrase {
-      font-size: 1rem;
-    }
-  
-    .countdown {
-      width: 100%;
-      max-width: 100%;
-    }
-  
-    .time-unit {
-      margin: 0 3px;
-    }
-  
-    .time-unit .time-value {
-      font-size: 1.2rem;
-    }
-  
-    .time-unit p {
-      font-size: 0.7rem;
-    }
+
+  .countdown {
+    width: 100%;
+    max-width: 100%;
   }
-  
+
+  .time-unit {
+    margin: 0 10px;
+  }
+
+  .time-unit .time-value {
+    font-size: 1rem; /* Adjusted for very small screens */
+  }
+
+  .time-unit p {
+    font-size: 0.8rem; /* Adjusted for very small screens */
+  }
+}

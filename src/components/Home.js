@@ -56,12 +56,16 @@ const HomeComponent = () => {
       <nav className="navbar">
         <div className="container">
           <div className="logo-container">
-            <img src={logo} alt="IMC Logo" className="logo-img" />
+            <a href="#home">
+              <img src={logo} alt="IMC Logo" className="logo-img" />
+            </a>
           </div>
           <div className="imc-title">
+            <a href="#home">
               <span className="imc-letter i">I</span>
               <span className="imc-letter m">M</span>
               <span className="imc-letter c">C</span>
+              </a>
           </div>
           <div className="navbar-toggle" onClick={toggleNavbar}>
             ☰

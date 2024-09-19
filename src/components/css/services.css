@@ -3,7 +3,6 @@
   width: 100%;
   height: auto;
   position: relative;
-  overflow: hidden;
   background: linear-gradient(90deg, #349FD9, #FFFFFF, #0069d9);
   background-size: 300%;
   transition: background-position 0.5s ease;

@@ -3,6 +3,18 @@ body, html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  
+}
+
+@font-face {
+  font-family: 'Azonix';
+  src: url('./Azonix.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.navbar, .navbar-nav a, .navbar-toggle {
+  font-family: 'Azonix', sans-serif; /* Use Azonix with a fallback font */
 }
 
 .home-component {
@@ -60,6 +72,7 @@ body, html {
   background-size: 300%;
   animation: moveGradient 10s infinite linear; /* Slower, smoother animation */
   transition: all 0.6s ease-in-out; /* Smooth transition for hover effect */
+
 }
 
 @keyframes moveGradient {
@@ -91,9 +104,7 @@ body, html {
 .imc-title-container {
   display: flex;
   align-items: center;
-  margin-left: 10px;
   position: relative;
-  
   
 }
 
@@ -102,41 +113,39 @@ body, html {
   align-items: center;
   font-size: 1.5rem;
   font-weight: 700;
-  position: relative;
+  font-family: 'Azonix', sans-serif;
+  margin-left: 60px; /* Adjust as needed to control spacing from the logo */
+  white-space: nowrap; /* Prevents the title from wrapping to the next line */
+  margin-right: 600px;
 }
-
+.imc-title a {
+  text-decoration: none; /* Removes the underline */
+}
+.imc-title:hover{
+  transform: scale(1.1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
 .imc-title .imc-letter {
   margin-right: 2px;
+  
 }
 
 .imc-title .i {
   color: #ef5225; /* Adjust the color to match the logo's color */
+  
 }
 
 .imc-title .m {
   color: #fcb712; /* Adjust the color to match the logo's color */
+  
 }
 
 .imc-title .c {
   color: #359fd9; /* Adjust the color to match the logo's color */
+  
 }
 
-/* Green underline effect */
-.imc-title::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0%;
-  height: 3px;
-  background-image: linear-gradient(90deg, #7eb941, #0056b3);
-  transition: width 0.3s ease;
-}
-
-.imc-title-container:hover .imc-title::after {
-  width: 100%;
-}
-
+/*search bar */
 .search-bar button {
   padding: 20px 40px;
   border: none;
@@ -149,6 +158,8 @@ body, html {
   font-weight: 700;
   background-size: 300%;
   transition: background-position 0.5s ease, color 0.5s ease;
+  
+  
 }
 
 .search-bar button:hover {
@@ -203,6 +214,8 @@ body, html {
 .logo-container {
   display: flex;
   align-items: center;
+  margin-left:20px;
+  margin-right: -50px;
 }
 
 .logo-container .logo-img {
@@ -210,9 +223,18 @@ body, html {
   height: 60px;
   object-fit: cover;
   border-radius: 50%;
+  transition: all 0.3s ease;
+
+}
+
+.logo-img:hover{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.2);
+  
 }
 
 /* Navbar Links */
+
 .navbar-nav {
   list-style: none;
   display: flex;
@@ -222,6 +244,7 @@ body, html {
 
 .navbar-nav li {
   padding: 0 20px;
+  
 }
 
 .navbar-nav a {
@@ -232,6 +255,7 @@ body, html {
   font-size: 20px;
   position: relative;
   transition: color 0.3s ease;
+  
 }
 
 .navbar-nav a:hover {
@@ -272,12 +296,14 @@ body, html {
   font-weight: 700;
   background-size: 300%;
   transition: background-position 0.5s ease, color 0.5s ease;
+  font-family: 'Azonix', sans-serif;
 }
 
 .join-button:hover {
   background-position: 100%;
   color: #fff;
 }
+
 
 /* Welcome Message Animation */
 @keyframes fadeIn {
@@ -297,13 +323,8 @@ body, html {
     font-size: 2rem;
   }
 
-  .search-bar {
-    width: 90%;
-    margin-top: 40%;
-  }
-
-  .search-bar input {
-    font-size: 18px;
+  .imc-title {
+    margin-right: 70px;
   }
 
   .search-bar button {
@@ -321,7 +342,7 @@ body, html {
   }
 
   .navbar {
-    padding: 5px 10px;
+    padding: 13px 10px;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -374,13 +395,7 @@ body, html {
     font-size: 1.5rem;
   }
 
-  .search-bar {
-    margin-top: 30%;
-  }
-
-  .search-bar input {
-    font-size: 16px;
-  }
+  
 
   .search-bar button {
     font-size: 14px;
@@ -411,9 +426,44 @@ body, html {
 
   .navbar-nav a {
     font-size: 16px;
+
   }
 
   .navbar-toggle {
     font-size: 1.2rem;
   }
 }
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .imc-title {
+    margin-right: 10px; /* Adjust margin to ensure navbar items are visible */
+  }
+
+  .navbar {
+    padding: 10px 15px; /* Adjust padding to make sure navbar fits well */
+  }
+
+  .navbar-nav {
+    display: flex; /* Ensure navbar links are displayed */
+    margin-top: 0; /* Remove any top margin if necessary */
+  }
+
+  .navbar-nav li {
+    padding: 0 15px; /* Adjust padding to fit navbar items properly */
+  }
+
+  .navbar-nav a {
+    font-size: 18px; /* Adjust font size for better readability on medium screens */
+  }
+
+  .logo-container {
+    margin-left: 10px; /* Adjust margin if needed for logo alignment */
+  }
+
+  .logo-container .logo-img {
+    width: 50px; /* Adjust logo size if needed */
+    height: 50px;
+  }
+}
+

@@ -1,8 +1,16 @@
+@font-face {
+  font-family: 'Azonix';
+  src: url('./Azonix.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 /* Partnership Banner Styles */
 .partnership-banner {
   background: linear-gradient(90deg, #ffffff, #fbfbfb, #0069d9);
   background-size: 300%;
-  transition: background-position 0.5s ease;
   padding: 10px 20px;
   text-align: center;
   display: flex;
@@ -10,64 +18,72 @@
   justify-content: center;
   width: 100vw;
   position: relative;
+  overflow: hidden;
+  transition: background-position 0.5s ease;
 }
 
 .partnership-banner:hover {
   background-position: 100%;
 }
 
-.partners-text {
+h4 {
   font-size: 1rem;
   margin-right: 15px;
   font-weight: bold;
-  color: #333; /* Ensure it matches text color in other sections */
-  transition: color 0.3s ease; /* Smooth color transition on hover */
+  color: #333;
+  transition: color 0.3s ease;
+  font-family: 'Azoniux', sans-serif; /* Example font for a modern look */
+  
 }
 
-.partners-text:hover {
-  color: #ffffff; /* Change text color on hover */
+h4:hover {
+  color: #ffffff;
 }
 
 .partners-logos {
   display: flex;
   align-items: center;
-  justify-content: center; /* Center logos horizontally */
-  flex-wrap: wrap; /* Wrap logos if they overflow */
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.partner {
+h4 {
   display: flex;
   align-items: center;
-  margin: 0 15px; /* Increased spacing for better separation */
-  transition: transform 0.3s ease; /* Smooth scale transition */
+  margin: 0 15px;
+  transition: transform 0.3s ease;
+  font-weight: 700;
+  font-family: 'Azonix', sans-serif;
+
 }
 
-.partner:hover {
-  transform: scale(1.1); /* Slightly enlarge logos on hover */
+h4:hover {
+  transform: scale(1.1);
 }
 
-.partner img {
-  max-height: 40px; /* Increase max-height for better visibility */
-  margin-right: 10px; /* Increase spacing between logo and text */
+h4 img {
+  max-height: 40px;
+  margin-right: 10px;
+  border-radius: 50px; /* Optional: Add rounded corners to logos */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow for depth */
 }
 
-.partner span {
-  font-size: 1rem; /* Slightly larger font size for better readability */
-  color: #333; /* Consistent text color */
-  transition: color 0.3s ease; /* Smooth color transition */
+h4 span {
+  font-size: 1rem;
+  color: #333;
+  transition: color 0.3s ease;
 }
 
-.partner:hover span {
-  color: #ffffff; /* Change text color on hover */
+h4:hover span {
+  color: #ffffff;
 }
 
-/* Ensure responsiveness for partnership banner */
 @media (max-width: 1024px) {
   .partnership-banner {
     padding: 10px 15px;
   }
 
-  .partners-text {
+  h4 {
     font-size: 0.9rem;
     margin-right: 10px;
   }
@@ -82,7 +98,7 @@
     padding: 10px 10px;
   }
 
-  .partners-text {
+  h4 {
     font-size: 0.8rem;
     margin-right: 0;
   }
@@ -98,7 +114,7 @@
     flex-direction: column;
   }
 
-  .partners-text {
+  h4 {
     font-size: 0.7rem;
     margin-right: 0;
     margin-bottom: 10px;

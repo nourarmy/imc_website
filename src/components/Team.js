@@ -7,14 +7,13 @@ const Team = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const descriptions = [
-    { name: 'Hamza Khlaf', position: 'Chair', facebook: 'https://www.facebook.com/el.khlafii' },
-    { name: 'yassine jeridi', position: 'President', facebook: 'https://www.facebook.com/profile.php?id=100034832442650' },
-    { name: 'Nour Bourass', position: ' Manager', facebook: 'https://www.facebook.com/nour.bourasse.7' },
-    { name: 'Jbeli Moemen', position: ' Managers', facebook: 'https://www.facebook.com/moemen.jb.1' },
-    { name: 'Nour Ben Chaabene', position: 'Project Manager', facebook: 'https://www.facebook.com/profile.php?id=100080779623994' },
-    { name: 'omar ben chagra', position: ' Manager', facebook: 'https://www.facebook.com/profile.php?id=100087058163325' },
-    { name: 'Ben amna Maram', position: ' Manager', facebook: 'https://www.facebook.com/maram.benamna' },
-    { name: 'Yasser Ayadi', position: ' Manager', facebook: 'https://www.facebook.com/AyadiYasserr' },
+    { name: 'Khlaf Hamza ', position: 'Chair', facebook: 'https://www.facebook.com/el.khlafii' },
+    { name: 'Jeridi Yassine ', position: 'President', facebook: 'https://www.facebook.com/profile.php?id=100034832442650' },
+    { name: 'Bourass Nour', position: ' OCP', facebook: 'https://www.facebook.com/nour.bourasse.7' },
+    { name: 'Jbeli Moemen ', position: ' Business Development Manager', facebook: 'https://www.facebook.com/moemen.jb.1' },
+    { name: 'Ben Chaabene Nour', position: 'Project Manager', facebook: 'https://www.facebook.com/profile.php?id=100080779623994' },
+    { name: 'Ben Chagra Omar', position: ' Production Manager', facebook: 'https://www.facebook.com/profile.php?id=100087058163325' },
+    { name: 'Ben amna Maram', position: ' Talent Manager', facebook: 'https://www.facebook.com/maram.benamna' },
     
   ];
 

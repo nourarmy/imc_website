@@ -52,7 +52,7 @@
   color: #fff;
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+  background: linear-gradient(to right, #5ca9fb 0%, #e9ebfe 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

@@ -76,6 +76,8 @@
 .team-container .titles h5 {
   margin-bottom: 20px;
   color: azure;
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font globally for content */
+
 }
 
 .team-container .facebook-icon {
@@ -87,6 +89,7 @@
 
 /* Centering the "Meet Our Team" title with a transition */
 .team-container h2 {
+
   position: relative;
   margin: 0 0 20px;
   z-index: 3;

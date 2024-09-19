@@ -1,3 +1,5 @@
+
+
 /* Contact Section */
 #contact {
   padding: 100px 20px;
@@ -154,7 +156,9 @@ a {
 #footer h2 {
   font-size: 24px;
   margin-bottom: 10px;
-  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease; /* Added transitions for color, transform, and text-shadow */
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+
+  
 }
 
 #footer h2:hover {
@@ -171,6 +175,7 @@ a {
 
 #footer a {
   color: #608dfd;
+  
 }
 
 #footer a:hover {
