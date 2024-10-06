@@ -41,11 +41,11 @@ const HomeComponent = () => {
     }, 500);
   };
 
-  const handleSearch = (e) => {
+/*  const handleSearch = (e) => {
     e.preventDefault();
     // Add your search logic here
     console.log("Search button clicked");
-  };
+  };*/
 
   const toggleNavbar = () => {
     setNavbarActive(!navbarActive);
