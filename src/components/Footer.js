@@ -9,7 +9,8 @@ const Footer = () => {
     email: '',
     phone: '',
     department: '',
-    message: ''
+    message: '',
+    WhyIMC: ''
   });
 
   /*const [contactFormState, setContactFormState] = useState({
@@ -31,7 +32,7 @@ const Footer = () => {
   const handleJoinUsSubmit = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_PUBLIC_KEY')
+      .sendForm('service_qu5a2ot', 'template_dgjpuzt', e.target, '95SxGZ7VKDvBOvW_f')
       .then(
         (result) => {
           console.log(result.text);
@@ -40,7 +41,8 @@ const Footer = () => {
             email: '',
             phone: '',
             department: '',
-            message: ''
+            message: '',
+            WhyIMC: ''
           });
           alert('Thank you for reaching out! Your message has been sent successfully.');
         },
@@ -151,6 +153,17 @@ const Footer = () => {
                   required
                 ></textarea>
               </div>
+              <div className="form-group">
+          <textarea
+            name="WhyIMC"
+            className="form-control"
+            rows="4"
+            placeholder="Why Choose IMC?"
+            value={joinUsFormState.whyChooseIMC}
+            onChange={handleJoinUsChange}
+            required
+          ></textarea>
+        </div>
               <button type="submit" className="btn btn-custom btn-lg">
                 Join Us
               </button>
