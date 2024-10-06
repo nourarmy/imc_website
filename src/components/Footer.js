@@ -32,7 +32,7 @@ const Footer = () => {
   const handleJoinUsSubmit = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm('', '', e.target, '')
+      .sendForm('service_qu5a2ot', 'template_dgjpuzt', e.target, '95SxGZ7VKDvBOvW_f')
       .then(
         (result) => {
           console.log(result.text);
