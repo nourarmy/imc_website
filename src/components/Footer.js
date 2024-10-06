@@ -44,7 +44,7 @@ const Footer = () => {
             message: '',
             WhyIMC: ''
           });
-          alert('Thank you for reaching out! Your message has been sent successfully.');
+          alert('Thank you for reaching out ! Your message has been sent successfully.');
         },
         (error) => {
           console.error('There was an error sending the email:', error.text);
