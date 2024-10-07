@@ -26,6 +26,7 @@ const HomeComponent = () => {
     }, 3000);
     return () => clearInterval(interval);
   }, []);
+  console.log(wordIndex); // This will use the variable.
 
   const handleArrowClick = (direction) => {
     setOpacity(0);
