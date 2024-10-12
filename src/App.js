@@ -4,7 +4,7 @@ import Home from './components/Home';
 import AboutUs from './components/AboutUs';
 import Services from './components/Services';
 import Team from './components/Team';
-import Upcomingevents from './components/Upcomingevents';
+import UpcomingEvents from './components/Upcomingevents';
 import Footer from './components/Footer';
 import CountdownTimer from './components/CountdownTimer';
 import Preloader from './components/Preloader';
@@ -21,34 +21,50 @@ function App() {
   const images = [logo1, logo2, logo3, logo4, logo5]; // Use imported images here
   const [isLoading, setIsLoading] = useState(true);
 
+  // Preloader effect
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 5000);
+    }, 5000); // Loading duration (5 seconds)
+
+    return () => clearTimeout(timer); // Cleanup timeout
   }, []);
-  
+
   return (
     <div className="App">
       {isLoading ? (
         <Preloader images={images} />
       ) : (
         <>
+          {/* Countdown Timer for the next event */}
           <CountdownTimer eventDate={eventDate} />
+
+          {/* Home Section */}
           <div id="home">
             <Home />
           </div>
+
+          {/* About Us Section */}
           <div id="about-us">
             <AboutUs />
           </div>
+
+          {/* Services Section */}
           <div id="services">
             <Services />
           </div>
+
+          {/* Upcoming Events Section */}
           <div id="upcoming-events">
-            <Upcomingevents />
+            <UpcomingEvents />
           </div>
+
+          {/* Team Section */}
           <div id="team">
             <Team />
           </div>
+
+          {/* Footer Section */}
           <div id="join-us">
             <Footer />
           </div>
