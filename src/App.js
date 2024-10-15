@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 import CountdownTimer from './components/CountdownTimer';
 import Preloader from './components/Preloader';
 
-// Import images
+
 import logo1 from './components/img/logo1.png';
 import logo2 from './components/img/logo2.png';
 import logo3 from './components/img/logo3.png';
