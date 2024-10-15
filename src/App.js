@@ -17,7 +17,7 @@ import logo4 from './components/img/logo4.png';
 import logo5 from './components/img/logo5.png';
 
 function App() {
-  const eventDate = '2024-10-27T00:00:00Z'; // Your next event date
+  const eventDate = '2024-10-27T00:00:00Z'; 
   const images = [logo1, logo2, logo3, logo4, logo5]; // Use imported images here
   const [isLoading, setIsLoading] = useState(true);
 
@@ -64,7 +64,7 @@ function App() {
             <Team />
           </div>
 
-          {/* Footer Section */}
+          
           <div id="join-us">
             <Footer />
           </div>

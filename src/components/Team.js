@@ -7,7 +7,6 @@ const Team = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const descriptions = [
-    { name: 'Khlaf Hamza ', position: 'Chair', facebook: 'https://www.facebook.com/el.khlafii' },
     { name: 'Jeridi Yassine ', position: 'President', facebook: 'https://www.facebook.com/profile.php?id=100034832442650' },
     { name: 'Bourass Nour', position: ' OCP', facebook: 'https://www.facebook.com/nour.bourasse.7' },
     { name: 'Jbeli Moemen ', position: ' Business Development Manager', facebook: 'https://www.facebook.com/moemen.jb.1' },
@@ -48,7 +47,7 @@ const Team = () => {
               }`}
             >
               <img
-                //src={`${process.env.PUBLIC_URL}/images/img${index + 1}.jpg`}
+                src={`${process.env.PUBLIC_URL}/img/img${index + 1}.jpeg`}
                 alt={member.name}
               />
               <div className="titles">
