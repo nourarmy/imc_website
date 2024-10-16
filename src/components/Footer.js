@@ -139,7 +139,7 @@ const Footer = () => {
                   <option value="project">Project Team</option>
                   <option value="business">Business Development Team</option>
                   <option value="production">Production Team</option>
-                  <option value="logistics">Talent Team</option>
+                  <option value="Talent">Talent Team</option>
                   <option value="Design Team">Design Team</option>
 
                 </select>
