@@ -140,6 +140,8 @@ const Footer = () => {
                   <option value="business">Business Development Team</option>
                   <option value="production">Production Team</option>
                   <option value="logistics">Talent Team</option>
+                  <option value="Design Team">Design Team</option>
+
                 </select>
               </div>
               <div className="form-group">
