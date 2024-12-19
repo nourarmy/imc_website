@@ -33,7 +33,7 @@ const CountdownTimer = ({ eventDate }) => {
   return (
     <div className="countdown-container">
       <div className="countdown-bar">
-        <div className="phrase">Get Ready! <span className="event-highlight">SDGSOFT2.0</span> Event <br /> <span className="line2">IS just around the corner:</span></div>
+        <div className="phrase">Get Ready! <span className="event-highlight">LEVEL UP</span> Event <br /> <span className="line2">IS just around the corner:</span></div>
         <div className="countdown">
           <div className="time-unit">
             <span className="time-value">{timeRemaining.days}</span>
